@@ -16,7 +16,7 @@ function init() {
   tablazat = document.querySelector("section.tablazat");
   kartyak.innerHTML = osszeallit(VIRAGLISTA, kepLinkek)
   tablazat.innerHTML = osszeallit2(VIRAGLISTA)
-  kartyak = document.querySelector("section.kartyak");
+  
 
 
 
@@ -44,7 +44,7 @@ function torlesGomb() {
 
 function torlesFunkcio(index) {
   VIRAGLISTA.splice(index, 1);
-  kartyak.innerHTML = osszeallit(VIRAGLISTA)
+  kartyak.innerHTML = osszeallit(VIRAGLISTA, kepLinkek)
   tablazat.innerHTML = osszeallit2(VIRAGLISTA)
 
   torlesGomb();
