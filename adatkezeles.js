@@ -22,7 +22,7 @@ export function osszeallit(lista) {
 export function osszeallit2(lista) {
   let txt2 = "";
   txt2 += `<div class = "container">`;
-  txt2 += `<table>`;
+  txt2 += `<table class="table table-hover">`;
   for (let index = 0; index < lista.length; index++) {
       txt2 += `<tr>`;
       for (const kulcs in lista[index]) {
