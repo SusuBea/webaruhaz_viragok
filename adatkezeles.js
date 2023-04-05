@@ -1,4 +1,6 @@
-export function osszeallit(lista) {
+
+
+export function osszeallit(lista, lista2) {
   let txt = "";
   txt += `<div class = "container">`;
   for (let index = 0; index < lista.length; index++) {
@@ -9,9 +11,15 @@ export function osszeallit(lista) {
     }
     txt += `<div class= "kartya">`;
     txt += `<h3>Virág adatai</h3>`;
+
     for (const kulcs in lista[index]) {
-      txt += `<p>${kulcs}: ${lista[index][kulcs]}</p>`;
+      txt += `<p>${kulcs}: ${lista[index][kulcs]}</p> `;
     }
+    
+    
+    txt += `<img src='${lista2[index]}' alt=''>`
+
+
     txt += `</div>`;
   }
   txt += `</div>`;
@@ -34,4 +42,7 @@ export function osszeallit2(lista) {
   txt2 += `</div>`;
   return txt2;
   //tablazat.innerHTML = txt2;
+ 
 }
+
+

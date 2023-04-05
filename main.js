@@ -1,4 +1,4 @@
-import { VIRAGLISTA, VIRAGKULCS } from "./adat.js";
+import { VIRAGLISTA, VIRAGKULCS, kepLinkek } from "./adat.js";
 import  { osszeallit, osszeallit2 } from "./adatkezeles.js";
 // import  { rendezesBarmiSzerint} from "./rendezesSzures.js";
 window.addEventListener("load", init);
@@ -14,8 +14,10 @@ function init() {
   ARTICLE = document.querySelector("article");
   kartyak = document.querySelector("section.kartyak");
   tablazat = document.querySelector("section.tablazat");
-  kartyak.innerHTML = osszeallit(VIRAGLISTA)
+  kartyak.innerHTML = osszeallit(VIRAGLISTA, kepLinkek)
   tablazat.innerHTML = osszeallit2(VIRAGLISTA)
+  kartyak = document.querySelector("section.kartyak");
+
 
 
   torlesGomb();

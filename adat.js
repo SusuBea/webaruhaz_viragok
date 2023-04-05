@@ -57,3 +57,5 @@ export const VIRAGKULCS = {
     magassag: "magassag",
     orszag: "orszag",
 };
+
+export const kepLinkek = ["./kepek/digitalis.jpg", "./kepek/dill_white.jpg", "./kepek/gentian.jpg", "./kepek/gentiana.jpg", "./kepek/digitalis.jpg", "./kepek/digitalis.jpg"];
