@@ -53,9 +53,9 @@ function torlesFunkcio(index) {
 function ujVirag() {
   //itt hozom létre  a listát amibe belepakolok majd mindent - NevInputElem...stb.
   const virag= {};
-  //let szuka = document.querySelector("#szuka");
-  //let kan = document.querySelector("#kan");
-  const ADAT = document.querySelectorAll("input");
+
+
+ 
   /**szedjük össze az űrlap adatait,
    * és tegyük bele egy objektumba 
    * és fűzzük, hozzá a listánkhoz
@@ -75,42 +75,18 @@ function ujVirag() {
   const ArInputElem = document.querySelector("#var") 
   virag.ar=ArInputElem.value;
 
-  // const EvszakInputElem = document.querySelector("#evszak") 
-  // if(EvszakInputElem.checked){
-  //   virag.evszak = "tavasz"
-  // }else if{
-  //   virag.evszak = "nyár"
-  // }
-
-  const KontinensInputElem = document.querySelector("#vkontinens") 
-  virag.kontinens=KontinensInputElem.value;
-
   const OrszagInputElem = document.querySelector("#vorszag") 
   virag.orszag=OrszagInputElem.value;
 
-  
+  console.log("ROGZITES")
+  console.log(virag)
 
-
-  VIRAGLISTA.push(virag);
-  console.log(VIRAGLISTA);
-  kartyak.innerHTML = osszeallit(VIRAGLISTA)
-  tablazat.innerHTML = osszeallit2(VIRAGLISTA)
-
+  VIRAGLISTA.push(virag)
+  kartyak.innerHTML = osszeallit(VIRAGLISTA, kepLinkek);
+  tablazat.innerHTML = osszeallit2(VIRAGLISTA);
   torlesGomb();
 }
+ 
+ 
 
 
-// let index = 0;
-// for (const kulcs in VIRAGLISTA[index]) {
-//   if (ADAT[index].id == "szuka" && (szuka.checked = true)) {
-//     console.log("szuka");
-//     Kutya[kulcs] = "szuka";
-//     index++;
-//   } else if (ADAT[index].id == "kan" && (kan.checked = true)) {
-//     console.log("kan");
-//     Kutya[kulcs] = "kan";
-//   } else {
-//     Kutya[kulcs] = `${ADAT[index].value}`;
-//   }
-//   index++;
-// }
